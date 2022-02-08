@@ -14,11 +14,11 @@ ds.plot.scatter(x="Age", y="Weight", color="blue", label="Weight")
 allWeights = []
 allA = []
 maxAge = ds["Age"].max()
-allDiameter = []
+allWeights = []
 for i in range(maxAge - 1):
     allA.append(i+1)
     sumAges = ds[ds["Age"] == (i+1)]
-    allDiameter.append(sumAges["Weight"].mean())
+    allWeights.append(sumAges["Weight"].mean())
 
 plt.scatter(x = allA, y = allWeights, color = "red", label = "Mean")
 #plot diameter and mean
